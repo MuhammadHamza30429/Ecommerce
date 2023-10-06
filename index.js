@@ -5,7 +5,7 @@ const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const port = 8000;
+const port = 8080;
 const cors = require("cors");
 app.use(cors());
 
@@ -53,7 +53,7 @@ const sendVerificationEmail = async (email, verificationToken) => {
     from: "amazon.com",
     to: email,
     subject: "Email Verification",
-    text: `Please click the following link to verify your email: http://192.168.1.105:8000/verify/${verificationToken}`,
+    text: `Please click the following link to verify your email: http://172.31.20.114:8000/verify/${verificationToken}`,
   };
 
   // Send the email
